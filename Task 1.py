@@ -4,7 +4,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
 
-
 np.random.seed(42)
 n = 200
 data = pd.DataFrame({
@@ -22,7 +21,6 @@ data["price"] = (
 
 X = data[["sqft", "bedrooms", "bathrooms"]]
 y = data["price"]
-
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
